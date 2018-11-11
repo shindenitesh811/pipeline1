@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('poll scm') {
+    stage('send email') {
       steps {
-        mail(subject: 'Success', body: 'Build is successful', to: 'shindenitesh811@gmail.com')
+        emailext(subject: 'Build', body: 'Build is successful', to: 'niteshshindee82@gmail.com')
       }
     }
   }
